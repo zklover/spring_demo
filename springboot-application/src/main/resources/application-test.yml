@@ -1,0 +1,29 @@
+#server:
+#  port: 8088
+#  address: localhost
+#spring:
+#  profiles:
+#    active: dev
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://121.199.38.85:3306/d_wdt2a_v2
+#    username: dev
+#    password: wdterp
+#  application:
+#    name: test
+spring:
+  profiles:
+    active: test
+nacos:
+  config:
+    type: yaml
+    server-addr: 127.0.0.1:8848
+    context-path: nacos
+    data-ids: test_test,test_value
+    auto-refresh: true
+    group: DEFAULT_GROUP
+    bootstrap:
+      enable: true
+      log:
+        enable: true
+    namespace: 3dca5d26-04d0-44e1-a211-5aa96fe4ad2c

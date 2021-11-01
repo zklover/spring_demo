@@ -1,0 +1,26 @@
+server:
+  port: 8082
+  address: localhost
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://121.199.38.85:3306/d_wdt2a_v2
+    username: dev
+    password: wdterp
+  application:
+    name: test
+nacos:
+  discovery:
+    server-addr: 127.0.0.1:8848
+  config:
+    server-addr: 127.0.0.1:8848
+dubbo:
+  application:
+    name: spring-boot-dubbo-nacos-provider
+  registry:
+    address: nacos://127.0.0.1:8848
+    protocol: 20880
+  protocol:
+    name: dubbo
